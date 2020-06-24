@@ -4,18 +4,21 @@ package org.example.springBootApplicationConfig;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 //Spring-Framework bekannt machen zum Laden
 @Component
 @ConfigurationProperties("applicatiion-properties")
 public class NewProperties {
 
-    private String testProperties = "New Properties";
+    List<String> listProperties;
 
-    public String getTestProperties() {
-        return testProperties;
+    public List<String> getListProperties() {
+        return listProperties;
     }
 
-    public void setTestProperties(String testProperties) {
-        this.testProperties = testProperties;
+    public void setListProperties(List<String> listProperties) {
+        this.listProperties = listProperties;
     }
+
 }
